@@ -49,13 +49,14 @@ function lookForHosting() {
     });
     
     // set up the regex for execution
-    var rx = /https(?:(?:%3A%2F%2F)|(?:\:\/\/))googledrive\.com(?:(?:%2F)|(?:\/))host(?:(?:\/)|(?:%2F))([\w-_]+)/gmi
+    var rx = /https(?:(?:%3A%2F%2F)|(?:\:\/\/))googledrive\.com(?:(?:%2F)|(?:\/))host(?:(?:\/)|(?:%2F))([\w-]{8,})(\/[\w\.-]+)?/gmi
 
     // store the matches on this pages
     var match,matches=[];
     while (match = rx.exec(html)) {
       matches.push ({
         id:match[1],
+        fileName: match.length > 2  && match[2]  && match[2].slice(0,1) === "/" ? match[2].slice(1) : "",
         match:match[0]
       });
     }
@@ -76,11 +77,11 @@ function lookForHosting() {
   
   // write to a sheet
   var ss = SpreadsheetApp.openById(sr.sheetId);
-  var sh = ss.getSheetByName(sr.sheetName);
+  var sh = ss.getSheetByName(sr.sheetHosting);
   
   // if if does exist, create it.
   if (!sh) {
-    sh = ss.insertSheet(sr.sheetName);
+    sh = ss.insertSheet(sr.sheetHosting);
   }
   
   // clear it
@@ -96,6 +97,7 @@ function lookForHosting() {
           url:c.url,
           index:i,
           id:d.id,
+          fileName:d.fileName,
           match:d.match
         };
       }));
@@ -107,6 +109,26 @@ function lookForHosting() {
     .setValues(fiddler.createValues());
     
     Logger.log(fiddler.getData().length + ' hosting changes need to be made');
+    
+    // lets also write a summary sheet of pages on the site that need to be worked
+    var sh = ss.getSheetByName(sr.sheetName);
+    
+    // if if does exist, create it.
+    if (!sh) {
+      sh = ss.insertSheet(sr.sheetName);
+    }
+    
+    // clear it
+    sh.clearContents();
+    
+    fiddler.setData(work)
+    .mapRows(function (row) {
+      row.matches = row.matches.length;
+      return row;
+    })
+    .getRange(sh.getDataRange())
+    .setValues(fiddler.createValues());
+    
   }
 
  
