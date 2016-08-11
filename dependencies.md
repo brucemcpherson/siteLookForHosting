@@ -1,5 +1,5 @@
 # Google Apps Script Project: siteLookForHosting
-This repo (siteLookForHosting) was automatically updated on 10 August 2016 11:36:33 BST by GasGit
+This repo (siteLookForHosting) was automatically updated on 11 August 2016 15:27:30 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project siteLookForHosting
@@ -11,14 +11,20 @@ The shared link for [siteLookForHosting is here](https://script.google.com/d/13B
 --- | --- 
 Code| server_js
 Settings| server_js
+updating| server_js
+identifying| server_js
+copying| server_js
+hostUrls| server_js
 ### Directly referenced libraries
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|64|no|[here](libraries/cUseful "library source")
+cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|66|no|[here](libraries/cUseful "library source")
+cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff "library source")
 ### All dependencies and sub dependencies
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|64|no|[here](libraries/cUseful "library source")
+cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|66|no|[here](libraries/cUseful "library source")
+cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff "library source")
 ### Enabled Google Services
 no libraries discovered
 ###Need more detail ?
