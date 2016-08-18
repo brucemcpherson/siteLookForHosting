@@ -30,9 +30,17 @@ function createHostUrls () {
   // clear it
   sh.clearContents();
 
-  fiddler.insertColumn ('hostUrl')
+  fiddler
+  .insertColumn ('hostUrl')
+  .insertColumn('encodedUrl')
   .mapRows(function (row) {
-    row.hostUrl = row.copiedId === si.treatments.missingText ? si.treatments.missingText : su.urls[su.hostingType](row.copiedId);
+    if (row.copiedId === si.treatments.missingText) {
+      row.hostUrl = row.encodedUrl = "";
+    }
+    else {
+      row.hostUrl =  su.urls[su.hostingType](row.copiedId,row.filePath);
+      row.encodedUrl = escape (row.hostUrl).replace(/\//g,"%2F");
+    }
     return row;
   })
   .getRange(sh.getDataRange())
