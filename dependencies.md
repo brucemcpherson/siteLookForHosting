@@ -1,5 +1,5 @@
 # Google Apps Script Project: siteLookForHosting
-This repo (siteLookForHosting) was automatically updated on 11 August 2016 15:27:30 BST by GasGit
+This repo (siteLookForHosting) was automatically updated on 18 August 2016 11:39:15 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project siteLookForHosting
@@ -26,6 +26,8 @@ cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff
 cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|66|no|[here](libraries/cUseful "library source")
 cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff "library source")
 ### Enabled Google Services
-no libraries discovered
+*library*|*identifier*|*version*
+--- | --- | --- 
+Drive| Drive|v2
 ###Need more detail ?
 You can see [full project info as json here](info.json)
