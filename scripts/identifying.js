@@ -64,7 +64,7 @@ function identifyHostingFiles () {
         fob.folderPath = si.treatments.path
         .replace(/\{id\}/g,fob.id)
         .replace(/\{drivePath}/g,fob.path)
-        .replace(/\{mime}/g,du.getShortMime(file.getMimeType()));
+        .replace(/\{mime}/g,Settings.mimeShorts(file.getMimeType()));
         
         fob.filePath = fob.folderPath + fob.fileName;
         
