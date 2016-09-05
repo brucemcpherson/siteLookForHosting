@@ -4,7 +4,7 @@ var Settings = (function(ns) {
     search:"",                                 // enter a search term to concentrate on particular pages
     siteName:"share",                          // site name
     domain:"mcpher.com",                       // domain
-    maxPages:0,                                // max pages - start low to test
+    maxPages:0,                                // max pages - start low to test - 0 for all
     maxChunk:200                               // max children to read in one go
   };
   
@@ -23,7 +23,9 @@ var Settings = (function(ns) {
       fileName:"{name}",                          // template for output file name - can be {id}-{name}
       path:"/public/hosting/sites/xliberation/{mime}/",             // template for file path  can be  {id}-{name}-{drivePath}-{mime}
       failOnMissing:false,                        // whether to fail if file is missing
-      missingText:"MISSING"
+      missingText:"MISSING",
+      missingGadget:"NOT FOUND IN TEMPLATE",
+      missingPage:"TEMPLATE PAGE NOT FOUND"
     } 
   };
                 
@@ -39,7 +41,7 @@ var Settings = (function(ns) {
 
   ns.host = {
     sheetId:ns.report.sheetId,
-    sheetName:'drive-' + ns.report.sheetHosting,
+    sheetName:'gcs-' + ns.report.sheetHosting,
     hostingType:'gcs',
     urls: {
       drive:function(id,path) { 
@@ -58,6 +60,23 @@ var Settings = (function(ns) {
       testStub:'rubbishfortesting',
       deleteBefore:true,
       reportDiffs:true
+    }
+  };
+ 
+  ns.sense = {
+    sheetId:ns.report.sheetId,                  // where to write the results
+    sheetName:"prettygit-" + '-' + ns.report.sheetHosting,
+  };
+
+  ns.gadgets = {
+    sheetId:ns.report.sheetId,                  // where to write the results
+    sheetName:"copyGadgets-" + new Date().getTime() + '-' + ns.report.sheetHosting,
+    templates:{
+      "xCopy of siteinstrumentation.xml":"https://sites.google.com/a/mcpher.com/share/Home/excelquirks/gadgettemplate",
+      "xsiteindex.xml":"https://sites.google.com/a/mcpher.com/share/Home/excelquirks/gadgettemplate",
+      "xsiteyahoo.xml":"https://sites.google.com/a/mcpher.com/share/Home/excelquirks/gadgettemplate",
+      "xsitesense.xml":"https://sites.google.com/a/mcpher.com/share/Home/excelquirks/gadgettemplate",
+      "prettygit.xml":"https://sites.google.com/a/mcpher.com/share/Home/excelquirks/gadgettemplate"
     }
   };
 
