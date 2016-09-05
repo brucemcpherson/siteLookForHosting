@@ -60,13 +60,15 @@ function identifyHostingFiles () {
         fob.fileName = si.treatments.fileName
         .replace(/\{id\}/g,fob.id)
         .replace(/\{name}/g,fob.name);
-        
+
         fob.folderPath = si.treatments.path
         .replace(/\{id\}/g,fob.id)
         .replace(/\{drivePath}/g,fob.path)
         .replace(/\{mime}/g,Settings.mimeShorts(file.getMimeType()));
         
+        fob.role = Settings.mimeShorts(file.getMimeType());
         fob.filePath = fob.folderPath + fob.fileName;
+        fob.match = c.match;
         
         // what to do if we already have this file path?
         if (p.paths.hasOwnProperty(fob.filePath)) {
@@ -106,6 +108,7 @@ function identifyHostingFiles () {
   // clear it
   sh.clearContents();
   var fileFiddler = new cUseful.Fiddler();
+ 
   fileFiddler.setData(Object.keys(work.files).map(function(k) {
     return work.files[k];
   }))
