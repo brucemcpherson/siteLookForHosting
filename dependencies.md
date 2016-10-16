@@ -1,5 +1,5 @@
 # Google Apps Script Project: siteLookForHosting
-This repo (siteLookForHosting) was automatically updated on 05 September 2016 13:15:06 BST by GasGit
+This repo (siteLookForHosting) was automatically updated on 16 October 2016 15:28:45 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project siteLookForHosting
