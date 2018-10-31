@@ -1,0 +1,21 @@
+{
+  "timeZone": "Europe/London",
+  "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "Drive",
+      "serviceId": "drive",
+      "version": "v2"
+    }],
+    "libraries": [{
+      "userSymbol": "cUseful",
+      "libraryId": "1EbLSESpiGkI3PYmJqWh3-rmLkYKAtCNPi1L2YCtMgo2Ut8xMThfJ41Ex",
+      "version": "66",
+      "developmentMode": true
+    }, {
+      "userSymbol": "cjsDiff",
+      "libraryId": "1g12xyo7_Sf2Teft9zVi6lb9Ak0ANEKMtzU3hZu4vNobn9QL-BkGQOU9_",
+      "version": "1"
+    }]
+  },
+  "exceptionLogging": "STACKDRIVER"
+}
