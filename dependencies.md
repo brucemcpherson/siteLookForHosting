@@ -1,5 +1,5 @@
 # Google Apps Script Project: siteLookForHosting
-This repo (siteLookForHosting) was automatically updated on 16 October 2016 15:28:45 BST by GasGit
+This repo (siteLookForHosting) was automatically updated on 31 October 2018 11:42:59 GMT by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project siteLookForHosting
@@ -20,19 +20,22 @@ addMoreSense| server_js
 ft| server_js
 findsiteindex| server_js
 findprettygit| server_js
+appsscript| json
 ### Directly referenced libraries
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|unknown|no|[here](libraries/cUseful "library source")
-cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff "library source")
+cUseful| cUseful|1EbLSESpiGkI3PYmJqWh3-rmLkYKAtCNPi1L2YCtMgo2Ut8xMThfJ41Ex|66|no|[here](libraries/cUseful "library source")
+cjsDiff| cjsDiff|1g12xyo7_Sf2Teft9zVi6lb9Ak0ANEKMtzU3hZu4vNobn9QL-BkGQOU9_|1|no|[here](libraries/cjsDiff "library source")
 ### All dependencies and sub dependencies
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|unknown|no|[here](libraries/cUseful "library source")
-cjsDiff| cjsDiff|M9zcCXivXIkjpW_mA_X1Vtiz3TLx7pV4j|1|no|[here](libraries/cjsDiff "library source")
+cUseful| cUseful|1EbLSESpiGkI3PYmJqWh3-rmLkYKAtCNPi1L2YCtMgo2Ut8xMThfJ41Ex|66|no|[here](libraries/cUseful "library source")
+cjsDiff| cjsDiff|1g12xyo7_Sf2Teft9zVi6lb9Ak0ANEKMtzU3hZu4vNobn9QL-BkGQOU9_|1|no|[here](libraries/cjsDiff "library source")
 ### Enabled Google Services
 *library*|*identifier*|*version*
 --- | --- | --- 
 Drive| Drive|v2
-###Need more detail ?
+### Scopes required
+no scopes discovered
+### Need more detail ?
 You can see [full project info as json here](info.json)
